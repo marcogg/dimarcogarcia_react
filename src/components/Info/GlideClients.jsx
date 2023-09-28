@@ -1,12 +1,14 @@
 import Glide from '@glidejs/glide'
+// import { useEffect } from 'react'
+// import '../../../node_modules/@glidejs/glide/dist/glide.min.js'
 
-const GlideHeader = () => {
-  const toArray = Array.from(document.querySelectorAll('.glideHeader'))
+const GlideClients = () => {
+  const toArray = Array.from(document.querySelectorAll('.glideClients'))
 
   toArray.forEach((item, index) => {
-    const slide = new Glide('.glideHeader', {
+    const slide = new Glide('.glideClients', {
       autoplay: 4000,
-      perView: 1,
+      perView: 2,
       hoverpause: true,
       bond: true,
       gap: 50,
@@ -29,4 +31,4 @@ const GlideHeader = () => {
   })
 }
 
-export default GlideHeader
+export default GlideClients

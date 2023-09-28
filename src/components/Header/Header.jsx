@@ -4,8 +4,12 @@ import '../../styles/_layout/_layout.scss'
 import '../../styles/_responsive/_responsive.scss'
 import '../../styles/_fonts/_fonts.scss'
 import GlideHeader from './GlideHeader'
+import { useEffect } from 'react'
 
 const Header = () => {
+  useEffect(() => {
+    GlideHeader()
+  }, [])
   return (
     <section className='mb-5'>
       <div className='container'>
@@ -40,7 +44,6 @@ const Header = () => {
                 </div>
               </div>
               {/* End: Carousel */}
-              {GlideHeader()}
             </div>
           </div>
         </div>

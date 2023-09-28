@@ -1,0 +1,46 @@
+@import '@/styles/_fonts/_fonts.scss';
+
+.categories {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-inline-start: 0;
+    margin: 2% 0 4% 0;
+    overflow-x: auto;
+    & li {
+        list-style-type: none;
+        font-family: $mainFont;
+        font-weight: medium;
+        font-size: 1em;
+        padding: 10px 20px;
+        border-radius: 30px;
+        text-align: center;
+        align-items: center;
+    }
+    & .active,
+     :hover {
+        background: linear-gradient(92.81deg, #3957ED 17.54%, #7EC9F5 96.29%);
+        padding: 10px 20px;
+        font-weight: 700;
+        color: white;
+        transition: 0.25s;
+        border-radius: 30px;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .categories {
+        & li {
+            font-size: 1em;
+        }
+    }
+}

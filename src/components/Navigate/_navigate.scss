@@ -3,7 +3,7 @@
 
 @media screen and (max-width:768px) {
     nav {
-        margin-top: 2%;
+        padding-top: 2%;
         margin-bottom: 5%;
         & .menu {
             display: none;
@@ -54,12 +54,12 @@
         display: none;
     }
     nav {
-        margin-top: 2%;
+        padding-top: 2%;
         margin-bottom: 5%;
         display: flex;
         width: 100%;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         & .menu {
             display: flex;
             flex-direction: row;

@@ -1,0 +1,95 @@
+@import '@/styles/_fonts/_fonts.scss';
+
+@media screen and (min-width:1024px) {
+    .containerCarousel {
+        position: relative;
+        top: -460px;
+        left: 30px;
+    }
+}
+
+.serviceCarousel {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.circle {
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0;
+    & h2 {
+        font-size: 24px;
+        text-align: center;
+        align-items: center;
+        color: white;
+    }
+    &.design {
+        background-color: $primary;
+        text-shadow: 3px 1px 0 $primary;
+        margin: 20px auto;
+        & h2 {
+            font-size: 3em;
+        }
+    }
+    &.mkt {
+        background-color: $secondary;
+        margin: 20px auto;
+        & h2 {
+            font-size: 2em;
+            text-shadow: 3px 1px 0 $secondary;
+        }
+    }
+    &.webDev {
+        background-color: $highContrast;
+        margin: 20px auto;
+        & h2 {
+            font-size: 2em;
+            text-shadow: 3px 1px 0 $highContrast;
+        }
+    }
+    &.userEx {
+        background-color: $lowContrast;
+        margin: 20px auto;
+        & h2 {
+            font-size: 2em;
+            text-shadow: 3px 1px 0 $lowContrast;
+        }
+    }
+    // &.creativity {
+    //     background-color: $secondary;
+    // }
+}
+
+@media screen and (max-width:768px) {
+    .circle {
+        width: 120px;
+        height: 120px;
+        &.design {
+            font-size: 10px;
+        }
+        &.mkt {
+            font-size: 10px;
+        }
+        &.webDev {
+            font-size: 10px;
+        }
+        &.userEx {
+            font-size: 10px;
+        }
+    }
+}
+
+.logoLight {
+    filter: invert(100%) brightness(70%) contrast(120%) hue-rotate(200deg)
+}
+
+.logoDark {
+    filter: invert(100%) brightness(110%) contrast(120%) hue-rotate(200deg)
+}
