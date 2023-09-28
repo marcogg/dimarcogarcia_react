@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    background-color: #daf9ff;
+    transition: 0.2s ease-in-out;
+    overflow-x: hidden;
+}

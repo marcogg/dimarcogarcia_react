@@ -1,0 +1,256 @@
+// Imports
+@import '../_colors/colors';
+
+// MONTSERRAT FONT
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap');
+$mainFont:'Montserrat',
+sans-serif;
+
+/* ---------------MOBILE--------------- */
+
+@media screen and (min-width:300px) {
+    /* ------------FONTS----------- */
+    h1 {
+        font-size: 32px;
+        font-family: $mainFont;
+        font-weight: 800;
+    }
+    h2 {
+        font-size: 22px;
+        font-family: $mainFont;
+        font-weight: 700;
+    }
+    h3 {
+        font-size: 20px;
+        font-family: $mainFont;
+        font-weight: 500;
+    }
+    h4 {
+        font-size: 18px;
+        font-family: $mainFont;
+        font-weight: 400;
+    }
+    h5 {
+        font-size: 20px;
+        font-family: $mainFont;
+    }
+    h6 {
+        font-size: 18px;
+        font-family: $mainFont;
+    }
+    p {
+        font-family: $mainFont;
+        font-weight: lighter;
+        font-size: 14px;
+        font-weight: 300;
+    }
+}
+
+
+/* --------------TABLETS---------------- */
+
+@media screen and (min-width:768px) {
+    /* ------------FONTS----------- */
+    h1 {
+        font-size: 36px;
+        font-family: $mainFont;
+        font-weight: 800;
+    }
+    h2 {
+        font-size: 28px;
+        font-family: $mainFont;
+        font-weight: 700;
+    }
+    h3 {
+        font-size: 24px;
+        font-family: $mainFont;
+        font-weight: 500;
+    }
+    h4 {
+        font-size: 22px;
+        font-family: $mainFont;
+        font-weight: 400;
+    }
+    h5 {
+        font-size: 22px;
+        font-family: $mainFont;
+    }
+    h6 {
+        font-size: 18px;
+        font-family: $mainFont;
+    }
+    p {
+        font-family: $mainFont;
+        font-weight: lighter;
+        font-size: 16px;
+        font-weight: 300;
+    }
+}
+
+
+/* --------------Desktop---------------- */
+
+@media screen and (min-width:1024px) {
+    /* -----------FONTS------------ */
+    h1 {
+        font-size: 64px;
+        font-family: $mainFont;
+        font-weight: 800;
+    }
+    h2 {
+        font-size: 48px;
+        font-family: $mainFont;
+        font-weight: 700;
+    }
+    h3 {
+        font-size: 26px;
+        font-family: $mainFont;
+        font-weight: 500;
+    }
+    h4 {
+        font-size: 32px;
+        font-family: $mainFont;
+        font-weight: 400;
+    }
+    h5 {
+        font-size: 24px;
+        font-family: $mainFont;
+    }
+    h6 {
+        font-size: 24px;
+        font-family: $mainFont;
+    }
+    p {
+        font-family: $mainFont;
+        font-weight: lighter;
+        font-size: 20px;
+        font-weight: 300;
+    }
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+// CUSTOM FONTS
+header {
+    & h1 {
+        background: linear-gradient(270.2deg, #00a1ff 9.69%, #5f79fe 81.09%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    & h4 {
+        margin-top: 5%;
+        color: $lowContrast;
+    }
+}
+
+h2 {
+    &.lightTitle {
+        margin-top: 5%;
+        color: none;
+        background: linear-gradient(270.2deg, #00a1ff 9.69%, #5f79fe 81.09%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 400;
+    }
+}
+
+#aboutMe {
+    & h2 {
+        margin-top: 7%;
+        text-align: right;
+        color: none;
+        background: linear-gradient(270.2deg, #00a1ff 9.69%, #5f79fe 81.09%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 400;
+        font-size: 64px;
+    }
+    & h5 {
+        text-align: end;
+    }
+    & p {
+        text-align: right;
+    }
+}
+
+@media screen and (max-width:768px) {
+    #aboutMe {
+        & h2 {
+            font-size: 34px;
+        }
+    }
+}
+
+@media screen and (min-width:300px) {
+    .title {
+        background: linear-gradient(270.2deg, #7EC9F5 0%, #3957ED 125%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 52px;
+        &.right {
+            background: linear-gradient(270.2deg, #7EC9F5 0%, #3957ED 125%);
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .title {
+        background: linear-gradient(270.2deg, #7EC9F5 0%, #3957ED 125%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 64px;
+        &.right {
+            background: linear-gradient(270.2deg, #7EC9F5 0%, #3957ED 125%);
+        }
+    }
+}
+
+.title-light {
+    background: linear-gradient(270.2deg, #d0eeff 0%, #c4ceff 125%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #9cfeff75;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    text-shadow: 5px 4px 14px rgb(66 127 245 / 40%);
+}
+
+@media screen and (max-width:300px) {
+    .title {
+        font-size: 34px;
+    }
+}
+
+.light {
+    font-weight: 400;
+    font-size: 2em;
+}
+
+@media screen and (max-width:300px) {
+    .light {
+        font-size: 34px;
+    }
+}
+
+.blue {
+    color: $secondary;
+}
+
+.captionSlider {
+    color: $secondary;
+    font-size: 1.2rem;
+    font-family: $mainFont;
+    text-align: center;
+    font-weight: 200;
+    letter-spacing: 0.1rem;
+}

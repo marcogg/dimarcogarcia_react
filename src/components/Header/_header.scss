@@ -1,0 +1,96 @@
+header {
+    background-image: url(../img/bgHeader.svg);
+    background-size: cover;
+    max-height: 750px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.heroBg {
+    width: 90%;
+    display: block;
+    margin: auto;
+    filter: drop-shadow(9px 9px 49px #7EC9F5);
+}
+
+.animationRotate {
+    animation: spin 10s ease-in-out infinite;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+.phone {
+    position: absolute;
+    transform: translate(50%, -90%);
+    max-width: 50%;
+    display: block;
+    margin: auto;
+}
+
+.arrow {
+    width: 25vw;
+    min-width: 200px;
+    position: absolute;
+    left: 5%;
+    top: 450px;
+}
+
+@media screen and (min-width:300px) {
+    .containerCarousel {
+        position: relative;
+        top: -37vh;
+        left: 30px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    header {
+        background-size: cover;
+        height: 90vh;
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+    .containerHero {
+        position: relative;
+        width: 100%;
+    }
+    .arrow {
+        width: 60vw;
+        min-width: 200px;
+        position: absolute;
+        left: -10%;
+        top: calc(10% + 590px);
+    }
+}
+
+@media screen and (min-width:300px) {
+    .containerCarousel {
+        position: relative;
+        top: -37vh;
+        left: 30px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .containerCarousel {
+        position: relative;
+        top: -460px;
+        left: 30px;
+    }
+}
