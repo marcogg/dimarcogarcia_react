@@ -16,7 +16,7 @@ const GlideHeader = () => {
           gap: 10
         },
         768: {
-          perView: 2,
+          perView: 1,
           gap: 20
         },
         380: {

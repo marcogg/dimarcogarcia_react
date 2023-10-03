@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './_portfolio.scss'
 
 const Portfolio = () => {
   const [projectsCat, setProjectsCat] = useState('webDev')
   const getId = (e) => {
     const id = e.target.id
-    return console.log(setProjectsCat(id))
+    return setProjectsCat(id)
   }
+
+  useEffect(() => {
+    getId(projectsCat)
+  }, [])
 
   return (
     <>

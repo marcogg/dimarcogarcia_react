@@ -13,7 +13,7 @@ const Cards = () => {
             <h6 className='client-card-title'>${this.client}</h6>
             <h5>${this.projectName}</h5>
             <p className='mb-4'>${this.caption}</p>
-            <a className='mb-4'><span className='mt-2 project-link' id='${this.link}' onClick=''>Read More</span></a>
+            <a className='mb-4'><span className='mt-2 project-link' id='' onClick=''>Read More</span></a>
           </div>
         </div>
       </div>`

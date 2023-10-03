@@ -1,9 +1,32 @@
-header {
-    background-image: url(../img/bgHeader.svg);
-    background-size: cover;
-    max-height: 750px;
-    background-repeat: no-repeat;
-    background-position: bottom;
+@media (min-width: 300px) and (max-width: 767px) {
+    header {
+        background-image: url(../img/bgHeader.svg);
+        background-size: cover;
+        max-height: clamp(50vh, 65vh, 700px);
+        background-repeat: no-repeat;
+        background-position: bottom left;
+    }
+}
+
+
+@media (min-width:768px) and (max-width:1023px) {
+    header {
+        background-image: url(../img/bgHeader.svg);
+        background-size: cover;
+        height: 30vh;
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+}
+
+@media (min-width:1024px) {
+    header {
+        background-image: url(../img/bgHeader.svg);
+        background-size: cover;
+        max-height: 700px;
+        background-repeat: no-repeat;
+        background-position: left;
+    }
 }
 
 .heroBg {
@@ -59,13 +82,12 @@ header {
     }
 }
 
+.containerHero {
+    position: relative;
+    width: 100%;
+}
+
 @media screen and (max-width:768px) {
-    header {
-        background-size: cover;
-        height: 90vh;
-        background-repeat: no-repeat;
-        background-position: left;
-    }
     .containerHero {
         position: relative;
         width: 100%;
@@ -79,11 +101,28 @@ header {
     }
 }
 
+@media (min-width: 300px) and (max-width:768px) {
+    .arrow {
+        width: 40vw;
+        min-width: 150px;
+        position: absolute;
+        left: -5%;
+        top: clamp(60%, 50%, 70%);
+    }
+}
+
 @media screen and (min-width:300px) {
     .containerCarousel {
         position: relative;
-        top: -37vh;
+        top: -33vh;
         left: 30px;
+    }
+}
+@media screen and (min-width:768px) {
+    .containerCarousel {
+        position: relative;
+        top: -16vh;
+        left: 50px;
     }
 }
 
@@ -93,4 +132,11 @@ header {
         top: -460px;
         left: 30px;
     }
+}
+
+.serviceCarousel {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
 }
