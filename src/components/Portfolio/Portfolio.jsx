@@ -1,15 +1,27 @@
 import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import './_portfolio.scss'
 
 const Portfolio = () => {
+  const API_URL = 'http://localhost:5000/api/projects/getProjects'
+
   const [projectsCat, setProjectsCat] = useState('webDev')
+
+  // Axios request
+  const fetchData = async (categoryId) => {
+    const data = await axios.get(`${API_URL}/${categoryId}`)
+    return await console.log(data)
+  }
+
+  // Get Id from button to leash the axios request
   const getId = (e) => {
     const id = e.target.id
-    return setProjectsCat(id)
+    return fetchData(setProjectsCat(id))
   }
 
   useEffect(() => {
-    getId(projectsCat)
+    const initialData = async () => await fetchData('userExperience')
+    return initialData
   }, [])
 
   return (
@@ -23,7 +35,7 @@ const Portfolio = () => {
           </div>
           <div className='row w-100 noWrap mY-5'>
             <ul className='categories darkText' id='categories'>
-              <li className='active' id='webDev' onClick={getId}>Web development</li>
+              <li className='active' id='userExperience' onClick={getId}>User Experience</li>
               <li id='advertising'>Marketing</li>
               <li id='spatial'>Spatial design</li>
               <li id='visualDesign'>Visual design</li>
