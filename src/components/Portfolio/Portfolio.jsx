@@ -20,6 +20,7 @@ const Portfolio = () => {
   const getId = (e) => {
     const id = e.target.id
     console.log(id)
+
     return fetchData(id)
   }
 
@@ -39,7 +40,7 @@ const Portfolio = () => {
           </div>
           <div className='row w-100 noWrap mY-5'>
             <ul className='categories darkText' id='categories'>
-              <li className='active' id='userExperience' onClick={getId}>User Experience</li>
+              <li id='userExperience' onClick={getId}>User Experience</li>
               <li id='marketing' onClick={getId}>Marketing</li>
               <li id='spatial' onClick={getId}>Spatial design</li>
               <li id='visualDesign' onClick={getId}>Visual design</li>
