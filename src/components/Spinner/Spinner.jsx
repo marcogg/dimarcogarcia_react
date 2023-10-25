@@ -3,7 +3,7 @@ import './spinner.scss'
 const Spinner = () => {
   return (
     <div className='spinnerContainer'>
-      <div className='spinner' />
+      <img src='../../../img/circle.png' className='spinner' />
     </div>
   )
 }

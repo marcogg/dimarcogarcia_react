@@ -1,27 +1,31 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import './_portfolio.scss'
+import Spinner from '@/components/Spinner'
+import Cards from '@/components/Cards'
 
 const Portfolio = () => {
   const API_URL = 'http://localhost:5000/api/projects/getProjects'
 
-  const [projectsCat, setProjectsCat] = useState('webDev')
+  const [project, setProject] = useState([])
 
   // Axios request
   const fetchData = async (categoryId) => {
-    const data = await axios.get(`${API_URL}/${categoryId}`)
-    return await console.log(data)
+    const project = await axios.get(`${API_URL}/${categoryId}`)
+    console.log(project.data)
+    return setProject(project.data)
   }
 
   // Get Id from button to leash the axios request
   const getId = (e) => {
     const id = e.target.id
-    return fetchData(setProjectsCat(id))
+    console.log(id)
+    return fetchData(id)
   }
 
+  // Fetching default data
   useEffect(() => {
-    const initialData = async () => await fetchData('userExperience')
-    return initialData
+    fetchData('userExperience')
   }, [])
 
   return (
@@ -36,17 +40,20 @@ const Portfolio = () => {
           <div className='row w-100 noWrap mY-5'>
             <ul className='categories darkText' id='categories'>
               <li className='active' id='userExperience' onClick={getId}>User Experience</li>
-              <li id='advertising'>Marketing</li>
-              <li id='spatial'>Spatial design</li>
-              <li id='visualDesign'>Visual design</li>
-              <li id='innovation'>Innovation</li>
+              <li id='marketing' onClick={getId}>Marketing</li>
+              <li id='spatial' onClick={getId}>Spatial design</li>
+              <li id='visualDesign' onClick={getId}>Visual design</li>
+              <li id='webDevelopment' onClick={getId}>Web Development</li>
             </ul>
           </div>
           <div className='row w-100'>
             <div className='projects' id='projects'>
-              {
+              {project
+                ? project.map((projects) => (
+                  <Cards key={projects._id} caption={projects.caption} brand={projects.brand} image={projects.image} projectName={projects.projectName} />
+                ))
 
-              }
+                : <Spinner />}
             </div>
           </div>
         </div>
