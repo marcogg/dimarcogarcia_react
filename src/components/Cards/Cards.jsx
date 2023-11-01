@@ -1,8 +1,9 @@
 import React from 'react'
 import './_cards.scss'
+import { Link } from 'react-router-dom'
 
 // eslint-disable-next-line react/prop-types
-const Cards = ({ caption, brand, image, projectName }) => {
+const Cards = ({ caption, brand, image, projectName, projectKey }) => {
   return (
     <div className='card'>
       <div className='imageContainer'>
@@ -15,7 +16,7 @@ const Cards = ({ caption, brand, image, projectName }) => {
             <h6 className='client-card-title'>{brand}</h6>
             <h5>{projectName}</h5>
             <p className='mb-4'>{caption}</p>
-            <a className='mb-4'><span className='mt-2 project-link' id='' onClick=''>Read More</span></a>
+            <Link to={`/${projectKey}`}><span className='mb-4 mt-2 project-link'>Read More</span></Link>
           </div>
         </div>
       </div>
