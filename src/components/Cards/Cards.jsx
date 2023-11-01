@@ -7,7 +7,7 @@ const Cards = ({ caption, brand, image, projectName }) => {
     <div className='card'>
       <div className='imageContainer'>
         <div className='overlay' />
-        <img src={image} className='w-100' loading='lazy' />
+        <img src={`../..${image}`} className='w-100' loading='lazy' />
       </div>
       <div className='meta'>
         <div className='w-100'>
@@ -18,7 +18,7 @@ const Cards = ({ caption, brand, image, projectName }) => {
             <a className='mb-4'><span className='mt-2 project-link' id='' onClick=''>Read More</span></a>
           </div>
         </div>
-      </div>`
+      </div>
     </div>
   )
 }

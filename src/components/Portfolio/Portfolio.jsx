@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import './_portfolio.scss'
@@ -8,6 +9,12 @@ const Portfolio = () => {
   const API_URL = 'http://localhost:5000/api/projects/getProjects'
 
   const [project, setProject] = useState([])
+  const [isActive, setIsActive] = useState('false')
+
+  // ToggleButton Categories
+  const handleToggle = () => {
+    setIsActive(!isActive)
+  }
 
   // Axios request
   const fetchData = async (categoryId) => {
@@ -20,7 +27,7 @@ const Portfolio = () => {
   const getId = (e) => {
     const id = e.target.id
     console.log(id)
-
+    handleToggle()
     return fetchData(id)
   }
 
@@ -40,11 +47,11 @@ const Portfolio = () => {
           </div>
           <div className='row w-100 noWrap mY-5'>
             <ul className='categories darkText' id='categories'>
-              <li id='userExperience' onClick={getId}>User Experience</li>
-              <li id='marketing' onClick={getId}>Marketing</li>
-              <li id='spatial' onClick={getId}>Spatial design</li>
-              <li id='visualDesign' onClick={getId}>Visual design</li>
-              <li id='webDevelopment' onClick={getId}>Web Development</li>
+              <li className={`isActive ? active: `} id='userExperience' onClick={getId}>User Experience</li>
+              <li className={`isActive ? active: `} id='marketing' onClick={getId}>Marketing</li>
+              <li className={`isActive ? active: `} id='spatial' onClick={getId}>Spatial design</li>
+              <li className={`isActive ? active: `} id='visualDesign' onClick={getId}>Visual design</li>
+              <li className={`isActive ? active: `} id='webDevelopment' onClick={getId}>Web Development</li>
             </ul>
           </div>
           <div className='row w-100'>
