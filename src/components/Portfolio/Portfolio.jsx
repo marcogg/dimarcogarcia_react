@@ -58,7 +58,7 @@ const Portfolio = () => {
             <div className='projects' id='projects'>
               {project
                 ? project.map((projects) => (
-                  <Cards key={projects._id} caption={projects.caption} brand={projects.brand} image={projects.image} projectName={projects.projectName} />
+                  <Cards key={projects._id} {...projects} />
                 ))
 
                 : <Spinner />}

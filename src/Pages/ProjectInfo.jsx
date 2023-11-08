@@ -1,9 +1,12 @@
-const ProjectInfo = ({ id, projectName, image, brand, year, challenge, approach, impact, skills }) => {
+import { useLocation } from 'react-router-dom'
+
+const ProjectInfo = () => {
+  const state = useLocation()
   return (
     <>
       <div className='container'>
         <div className='col-6'>
-          <h1>{projectName}</h1>
+          <h1>{state.projectName}</h1>
         </div>
       </div>
     </>
