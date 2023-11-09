@@ -65,9 +65,6 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
-        <div className='projectsModal'>
-          {/* Modals created dynamically in functions.js */}
-        </div>
       </section>
     </>
   )
