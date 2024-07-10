@@ -1,18 +1,18 @@
+import { ProjectProvider } from './context/ProjectContext'
+import Home from './Pages/Home'
+import ProjectInfo from './Pages/ProjectInfo'
 import './App.css'
-import Header from './components/Header/'
-import Info from './components/Info/Info'
-import Navigate from './components/Navigate/'
-import Portfolio from './components/Portfolio'
+import Cards from './components/Cards/Cards'
 
-function App () {
+// eslint-disable-next-line space-before-function-paren
+function App() {
   return (
     <>
-      <header>
-        <Navigate />
-        <Header />
-        <Info />
-        <Portfolio />
-      </header>
+      <ProjectProvider>
+        <Home />
+        <ProjectInfo />
+        <Cards />
+      </ProjectProvider>
     </>
   )
 }

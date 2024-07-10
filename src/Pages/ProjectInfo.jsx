@@ -1,16 +1,31 @@
 /* eslint-disable react/prop-types */
-const ProjectInfo = ({ props }) => {
-  // const API_URL = 'http://localhost:5000/api/projects/getSelectedProject'
-  // const { projectData } = axios.get(`${API_URL}/${id}`)
-  const projectInfo = props.location.state.project
+import { useEffect } from 'react'
+import { useProjectContext } from '../context/ProjectContext'
+import Spinner from '../components/Spinner'
+
+const ProjectInfo = (props) => {
+  const context = useProjectContext()
+  const selectedProject = context.selectedProject
+
+  useEffect(() => {
+    console.log(context.stateTest)
+    // if (props) {
+    //   context.setSelectedProject(prevState => ({ ...prevState, data: props }))
+    // }
+  }, [])
 
   return (
     <>
-      <div className='container'>
-        <div className='col-6'>
-          <h1>{projectInfo.projectName}</h1>
-        </div>
-      </div>
+      {context.loading
+        ? <Spinner />
+        : (
+          <div className='container'>
+            <div className='col-6'>
+              <h1>{`${selectedProject}`}</h1>
+            </div>
+          </div>
+          // eslint-disable-next-line indent
+        )}
     </>
   )
 }
