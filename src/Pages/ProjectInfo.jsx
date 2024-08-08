@@ -2,16 +2,15 @@
 import { useEffect } from 'react'
 import { useProjectContext } from '../context/ProjectContext'
 import Spinner from '../components/Spinner'
+import './_projectInfo.scss'
 
-const ProjectInfo = (props) => {
+const ProjectInfo = ({ projectName = 'test', ...props }) => {
   const context = useProjectContext()
-  const selectedProject = context.selectedProject
 
   useEffect(() => {
-    console.log(context.stateTest)
-    // if (props) {
-    //   context.setSelectedProject(prevState => ({ ...prevState, data: props }))
-    // }
+    console.log(context.projectFeatured)
+    console.log(context.projectFeatured.challenge)
+    console.log(context.loading)
   }, [])
 
   return (
@@ -19,11 +18,26 @@ const ProjectInfo = (props) => {
       {context.loading
         ? <Spinner />
         : (
-          <div className='container'>
-            <div className='col-6'>
-              <h1>{`${selectedProject}`}</h1>
+          <section className='bgProjects'>
+            <div className='container'>
+              <div className='row align-items-center'>
+                <div className='col-12 col-md-6 col-lg-6'>
+                  <h5 className='year'>{`${context.projectFeatured.year}`}</h5>
+                  <h1 className='title'>{`${context.projectFeatured.projectName}`}</h1>
+                  <p className='brand'>{`${context.projectFeatured.brand}`}</p>
+                </div>
+                <div className='col-12 col-md-6 col-lg-6'>
+                  <img className='image img-fluid' src={`${context.projectFeatured.image}`} />
+                </div>
+              </div>
+              <div className='row'>
+                <div className='col-12'>
+                  <h3>About the problem</h3>
+                  <p>{`${context.projectFeatured.challenge}`}</p>
+                </div>
+              </div>
             </div>
-          </div>
+          </section>
           // eslint-disable-next-line indent
         )}
     </>

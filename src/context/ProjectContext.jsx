@@ -9,7 +9,7 @@ function ProjectProvider({ ...props }) {
 
   const [projectList, setProjectList] = useState([])
   const [loading, setLoading] = useState(false)
-  const [selectedProject, setSelectedProject] = useState()
+  const [selectedProject, setSelectedProject] = useState({})
   const [stateTest, setStateTest] = useState(false)
   const [projectFeatured, setProjectFeatured] = useState({
     caption: '',
@@ -37,7 +37,6 @@ function ProjectProvider({ ...props }) {
   useEffect(() => {
     console.log(projectList)
   }, [projectList])
-
 
   const values = {
     projectList,

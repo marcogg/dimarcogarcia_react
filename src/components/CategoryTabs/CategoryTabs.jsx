@@ -9,7 +9,7 @@ const CategoryTabs = () => {
   const categoryTabs = [{
     id: 'userExperience',
     name: 'User Experience',
-    active: false
+    active: true
   },
   {
     id: 'marketing',
@@ -38,8 +38,17 @@ const CategoryTabs = () => {
 
   // ToggleButton Categories
   const handleToggle = (catIdName) => {
-    categoryTabs[catIdName].active = true
-    setIsActive(!isActive)
+    console.log(catIdName.name)
+    const selected = categoryTabs.catIdName
+    for (let i = 0; i < categoryTabs.length; i++) {
+      if (selected !== [i].id) {
+        [i].active = false
+        setIsActive(isActive)
+      } else {
+        [catIdName].active = true
+        setIsActive(!isActive)
+      }
+    }
   }
 
   // Axios request
@@ -49,8 +58,7 @@ const CategoryTabs = () => {
     console.log(project.data)
     context.setProjectList(project.data)
     context.setLoading(false)
-
-    return context.setProject(project.data)
+    context.setProject(project.data)
   }
 
   // Get Id from button to leash the axios request

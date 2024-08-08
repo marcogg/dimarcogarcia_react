@@ -27,18 +27,6 @@ const Portfolio = () => {
                 : context.projectList.map(project => (
                   <Cards
                     key={project._id}
-                    category={project.category}
-                    projectName={project.projectName}
-                    brand={project.brand}
-                    year={project.year}
-                    caption={project.caption}
-                    challenge={project.challenge}
-                    approach={project.approach}
-                    impact={project.impact}
-                    projectLink={project.projectLink}
-                    skills={project.skills}
-                    image={project.image}
-                    url={project.url}
                     {...project}
                   />
                 ))}

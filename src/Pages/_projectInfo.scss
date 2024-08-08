@@ -1,0 +1,38 @@
+// COLORS
+$primary:#7EC9F5;
+$secondary: #3957ED;
+$base: #f6f6f6;
+$lowContrast: #A5AFB6;
+$highContrast: #374249;
+
+.year{
+  color: $secondary;
+  font-weight: 300;
+  font-size: clamp(18px, 28px, 32px)
+}
+
+.title{
+  color: $secondary;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 42px, 3rem)
+}
+
+.brand{
+  font-size: clamp(18px, 28px, 32px);
+  color: $highContrast;
+}
+
+.image {
+  max-width: 100%;
+  border-radius: 40px;
+}
+
+section.bgProjects{
+  background: url(../../img/projectsBg.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  width: 100vw;
+}
