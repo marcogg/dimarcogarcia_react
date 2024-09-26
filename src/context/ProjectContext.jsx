@@ -26,6 +26,34 @@ function ProjectProvider({ ...props }) {
     skills: ''
   })
 
+  const [elementState, setElementState] = useState([{
+    id: 'userExperience',
+    name: 'UI & Frontend Dev',
+    active: true
+  },
+  {
+    id: 'marketing',
+    name: 'Visual Design',
+    active: null
+  },
+  {
+    id: 'spatial',
+    name: 'Spatial',
+    active: null
+  },
+  {
+    id: 'webDevelopment',
+    name: 'Web Dev',
+    active: null
+  },
+  {
+
+    id: 'visualDesign',
+    name: 'Visual Design',
+    active: null
+  }
+  ])
+
   useEffect(() => {
     setLoading(!loading)
     axios.get(`${API_URL}/userExperience`)
@@ -48,7 +76,9 @@ function ProjectProvider({ ...props }) {
     stateTest,
     setStateTest,
     projectFeatured,
-    setProjectFeatured
+    setProjectFeatured,
+    elementState,
+    setElementState
   }
 
   return (

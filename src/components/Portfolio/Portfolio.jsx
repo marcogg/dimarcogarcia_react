@@ -10,7 +10,7 @@ const Portfolio = () => {
 
   return (
     <>
-      <section className='mY-5'>
+      <section className='mY-5' id='projects'>
         <div className='container'>
           <div className='row w-100'>
             <div className='col-12 col-md-6 col-lg-6'>

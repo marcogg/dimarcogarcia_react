@@ -142,9 +142,32 @@
     }
 }
 
+@media screen and (min-width:300px) {
 .serviceCarousel {
     position: absolute;
+    transform: translate(-30px, 140px);
     top: 0;
     width: 100%;
     z-index: 10;
+}
+}
+
+@media screen and (min-width:768px) {
+.serviceCarousel {
+    position: absolute;
+    transform: translate(-30px, -90px);
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+}
+
+@media screen and (min-width:1023px) {
+.serviceCarousel {
+    position: absolute;
+    transform: translate(-30px, 20px);
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
 }

@@ -5,6 +5,7 @@ import '../../styles/_responsive/_responsive.scss'
 import '../../styles/_fonts/_fonts.scss'
 import GlideHeader from './GlideHeader'
 import { useEffect } from 'react'
+import Navigate from '../Navigate'
 
 const Header = () => {
   useEffect(() => {
@@ -12,6 +13,7 @@ const Header = () => {
   }, [])
   return (
     <header>
+      <Navigate />
       <section className='mb-5'>
         <div className='container'>
           <div className='row'>

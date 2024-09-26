@@ -1,54 +1,20 @@
 import axios from 'axios'
 import { useProjectContext } from '../../context/ProjectContext'
-import { useState } from 'react'
 
 const CategoryTabs = () => {
   const context = useProjectContext()
   const API_URL = 'http://localhost:5000/api/projects/getProjects'
 
-  const categoryTabs = [{
-    id: 'userExperience',
-    name: 'User Experience',
-    active: true
-  },
-  {
-    id: 'marketing',
-    name: 'Marketing',
-    active: false
-  },
-  {
-    id: 'spatial',
-    name: 'Spatial',
-    active: false
-  },
-  {
-    id: 'webDevelopment',
-    name: 'Web Dev',
-    active: false
-  },
-  {
-
-    id: 'visualDesign',
-    name: 'Visual Design',
-    active: false
-  }
-  ]
-
-  const [isActive, setIsActive] = useState(false)
-
   // ToggleButton Categories
-  const handleToggle = (catIdName) => {
-    console.log(catIdName.name)
-    const selected = categoryTabs.catIdName
-    for (let i = 0; i < categoryTabs.length; i++) {
-      if (selected !== [i].id) {
-        [i].active = false
-        setIsActive(isActive)
+  const handleToggle = (clickedId) => {
+    const updatedElements = context.elementState.map((element) => {
+      if (element.id === clickedId) {
+        return { ...element, active: true }
       } else {
-        [catIdName].active = true
-        setIsActive(!isActive)
+        return { ...element, active: false }
       }
-    }
+    })
+    context.setElementState(updatedElements)
   }
 
   // Axios request
@@ -73,15 +39,10 @@ const CategoryTabs = () => {
     <>
       <ul className='categories darkText' id='categories'>
         {
-          categoryTabs.map(category => (
-            <li key={category.id} className={`${category.active ? 'active' : ''}`} onClick={getId} id={category.id}>{category.name}</li>
+          context.elementState.map(category => (
+            <li key={category.id} className={`${category.active ? 'active' : ''}`} onClick={(e) => getId(e)} id={category.id}>{category.name}</li>
           ))
         }
-        {/* <li className={`active ${isActive ? 'active' : ''}`} id='userExperience' onClick={getId}>User Experience</li>
-        <li className={`${isActive ? 'active' : ''}`} id='marketing' onClick={getId}>Marketing</li>
-        <li className={`${isActive ? 'active' : ''}`} id='spatial' onClick={getId}>Spatial design</li>
-        <li className={`${isActive ? 'active' : ''}`} id='visualDesign' onClick={getId}>Visual design</li>
-        <li className={`${isActive ? 'active' : ''}`} id='webDevelopment' onClick={getId}>Web Development</li> */}
       </ul>
     </>
   )

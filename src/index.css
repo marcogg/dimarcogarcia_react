@@ -29,6 +29,12 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: url(../../img/projectsBg.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  width: 100vw;
 }
 
 h1 {

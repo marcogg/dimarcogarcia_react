@@ -26,13 +26,55 @@ $highContrast: #374249;
 .image {
   max-width: 100%;
   border-radius: 40px;
+  padding: 2%;
 }
 
-section.bgProjects{
+.subtitle{
+  color: $secondary;
+  font-weight: semibold;
+  font-size: clamp(18px, 2rem, 42px);
+}
+
+.textureProjects{
   background: url(../../img/projectsBg.svg);
-  background-position: top center;
   background-repeat: no-repeat;
-  background-size: cover;
-  height: auto;
-  width: 100vw;
+  background-size: 100%;
+  background-position: top;
+  position:absolute;
+  top:0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.bodyText{
+  line-height: 1.35em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: $highContrast;
+  font-size: clamp(15pt, 1.35rem, 18pt);
+}
+
+.pills{
+  padding: 1em;
+  border-radius: 30px;
+  border:3px solid white;
+  color: $secondary;
+  box-shadow: 3px 3px 10px #7EC9F5;
+  margin: 0.25em;
+  min-width: 80px;
+  text-align: center;
+}
+
+.pillsContainer{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+
+  // display: grid;
+  // grid-template-columns: repeat(4, 1fr);
+  // grid-template-rows: auto;
+  // grid-gap: 10px;
+  // justify-content: space-between;
+  // align-items: center;
 }

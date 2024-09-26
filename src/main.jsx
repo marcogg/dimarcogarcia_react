@@ -23,6 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <ProjectProvider>
     <RouterProvider router={router}>
       <App />
+      <ProjectInfo />
     </RouterProvider>
   </ProjectProvider>
 )

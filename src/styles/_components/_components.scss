@@ -337,16 +337,16 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 100px;
     padding-inline-start: 0;
-    margin: 2% 0 4% 0;
+    margin: 1% 0 3% 0;
     overflow-x: auto;
     & li {
         list-style-type: none;
         font-family: $mainFont;
         font-weight: medium;
         font-size: 1em;
-        padding: 10px 20px;
+        padding: 10px 15px;
         border-radius: 30px;
         text-align: center;
         align-items: center;
