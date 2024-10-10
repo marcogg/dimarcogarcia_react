@@ -1,5 +1,25 @@
-.glideProjects{
-  display: block;
-  position: relative;
-  z-index: 1000
+@import '../../styles/_fonts/fonts';
+@import '../../styles/_colors/colors';
+
+img.projectCarousel{
+  width: auto;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.link{
+  font-family:'Montserrat',sans-serif;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.projectTitle{
+  font-family: 'Montserrat',sans-serif;
+  font-size: clamp(16pt, 1.5rem, 22pt);
+  font-weight: 300;
+  color:$secondary;
+}
+
+.text-left{
+  text-align: left;
 }

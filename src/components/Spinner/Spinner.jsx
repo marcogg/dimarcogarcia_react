@@ -1,9 +1,9 @@
-import './spinner.scss'
+import './_spinner.scss'
 
 const Spinner = () => {
   return (
     <div className='spinnerContainer'>
-      <img src='../../../img/circle.png' className='spinner' />
+      <img src='../../../img/loader.png' className='spinner' />
     </div>
   )
 }

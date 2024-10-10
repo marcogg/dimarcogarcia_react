@@ -27,12 +27,12 @@ function ProjectProvider({ ...props }) {
   })
 
   const [elementState, setElementState] = useState([{
-    id: 'userExperience',
-    name: 'UI & Frontend Dev',
+    id: 'webDev',
+    name: 'UI & Web Dev',
     active: true
   },
   {
-    id: 'marketing',
+    id: 'visualDesign',
     name: 'Visual Design',
     active: null
   },
@@ -42,24 +42,31 @@ function ProjectProvider({ ...props }) {
     active: null
   },
   {
-    id: 'webDevelopment',
-    name: 'Web Dev',
+    id: 'userExperience',
+    name: 'UX',
     active: null
   },
   {
 
-    id: 'visualDesign',
-    name: 'Visual Design',
+    id: 'businessStrategy',
+    name: 'Business Strategy',
     active: null
   }
   ])
 
   useEffect(() => {
-    setLoading(!loading)
-    axios.get(`${API_URL}/userExperience`)
-      .then(response => setProjectList(response.data))
-      .catch(console.error('Failed to get project list'))
-    setLoading(false)
+    setLoading(true)
+    axios.get(`${API_URL}/webDev`)
+      .then(response => {
+        setProjectList(response.data)
+        localStorage.setItem('webDevProjects', JSON.stringify(response.data))
+      })
+      .catch(error => {
+        console.error('Failed to get project list', error)
+      })
+      .finally(() => {
+        setLoading(false)
+      })
   }, [])
 
   useEffect(() => {

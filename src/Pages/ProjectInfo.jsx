@@ -4,8 +4,9 @@ import { useProjectContext } from '../context/ProjectContext'
 import Spinner from '../components/Spinner'
 import './_projectInfo.scss'
 import Navigate from '../components/Navigate'
-import MoreProjects from '../components/MoreProjects/MoreProjects'
 import ScrollToTop from '../components/ScrollToTop/ScrollToTop'
+import CardsMoreProjects from '../components/CardsMoreProjects'
+import { useNavigate } from 'react-router-dom'
 
 const ProjectInfo = ({ ...props }) => {
   // useEffect(() => {
@@ -15,6 +16,7 @@ const ProjectInfo = ({ ...props }) => {
   // }, [])
 
   const context = useProjectContext()
+  const navigate = useNavigate()
 
   return (
     <>
@@ -70,9 +72,16 @@ const ProjectInfo = ({ ...props }) => {
                     </div>
                   </div>
                 </div>
+                {/* More Projects */}
+                <div className='row mt-4'>
+                  <div className='col-12 col-md-12 col-lg-12'>
+                    <h3 className='subtitle'>More related projects</h3>
+                    <CardsMoreProjects />
+                    <button onClick={() => navigate('/#projects')} className='btnProjects'>Browse other categories</button>
+                  </div>
+                </div>
               </div>
               {/* More Projects Carousel */}
-              <MoreProjects />
               <ScrollToTop />
             </section>
           </div>

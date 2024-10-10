@@ -48,11 +48,11 @@ $highContrast: #374249;
 }
 
 .bodyText{
-  line-height: 1.35em;
+  line-height: 1.85rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   color: $highContrast;
-  font-size: clamp(15pt, 1.35rem, 18pt);
+  font-size: clamp(14pt, 1.15rem, 16pt);
 }
 
 .pills{
@@ -77,4 +77,10 @@ flex-wrap: wrap;
   // grid-gap: 10px;
   // justify-content: space-between;
   // align-items: center;
+}
+
+.btnProjects{
+  background:linear-gradient($primary $secondary);
+  padding:5% 2%;
+  border-radius: 20px;
 }

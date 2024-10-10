@@ -1,32 +1,32 @@
 import Glide from '@glidejs/glide'
 
 const GlideProjects = () => {
-  const toArray = Array.from(document.querySelectorAll('.glideProjects'))
+  // const toArray = Array.from(document.querySelectorAll('.glideProjects'))
 
-  toArray.map(async (item, index) => {
-    const slideProjects = await new Glide('.glideProjects', {
-      autoplay: 4000,
-      perView: 1,
-      hoverpause: true,
-      bond: true,
-      gap: 50,
-      breakpoints: {
-        1024: {
-          perView: 4,
-          gap: 10
-        },
-        768: {
-          perView: 1,
-          gap: 20
-        },
-        380: {
-          perView: 1,
-          gap: 20
-        }
+  // toArray.map(async (item, index) => {
+  const slideProjects = new Glide('.glideProjects', {
+    type: 'carousel',
+    autoplay: 4000,
+    perView: 1,
+    hoverpause: true,
+    bond: true,
+    gap: 50,
+    breakpoints: {
+      1024: {
+        perView: 4,
+        gap: 10
+      },
+      768: {
+        perView: 1,
+        gap: 20
+      },
+      380: {
+        perView: 1,
+        gap: 20
       }
-    })
-    return slideProjects.mount()
+    }
   })
+  return slideProjects.mount()
 }
 
 export default GlideProjects

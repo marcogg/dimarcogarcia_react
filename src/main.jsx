@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import ProjectInfo from '@/Pages/ProjectInfo.jsx'
 import ErrorPage from '@/Pages/ErrorPage.jsx'
 import { ProjectProvider } from './context/ProjectContext.jsx'
+import MoreProjects from './components/MoreProjects/MoreProjects.jsx'
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <RouterProvider router={router}>
       <App />
       <ProjectInfo />
+      <MoreProjects />
     </RouterProvider>
   </ProjectProvider>
 )
