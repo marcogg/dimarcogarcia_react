@@ -7,6 +7,8 @@ import Navigate from '../components/Navigate'
 import ScrollToTop from '../components/ScrollToTop/ScrollToTop'
 import CardsMoreProjects from '../components/CardsMoreProjects'
 import { useNavigate } from 'react-router-dom'
+import CategoryTabs from '../components/CategoryTabs'
+import Footer from '../components/Footer/Footer'
 
 const ProjectInfo = ({ ...props }) => {
   // useEffect(() => {
@@ -74,19 +76,26 @@ const ProjectInfo = ({ ...props }) => {
                 </div>
                 {/* More Projects */}
                 <div className='row mt-4'>
-                  <div className='col-12 col-md-12 col-lg-12'>
+                  <div className='col-12 col-md-12 col-lg-12 mt-4'>
                     <h3 className='subtitle'>More related projects</h3>
+                    {/* Category Tabs */}
+                    <div className='row mt-4'>
+                      <div className='col-12 col-md-12 col-lg-12'>
+                        <CategoryTabs />
+                      </div>
+                    </div>
                     <CardsMoreProjects />
-                    <button onClick={() => navigate('/#projects')} className='btnProjects'>Browse other categories</button>
                   </div>
                 </div>
               </div>
-              {/* More Projects Carousel */}
-              <ScrollToTop />
             </section>
           </div>
           // eslint-disable-next-line indent
         )}
+      {/* More Projects Carousel */}
+      <ScrollToTop />
+      {/* Footer */}
+      <Footer />
     </>
   )
 }

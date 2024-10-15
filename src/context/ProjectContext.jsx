@@ -43,7 +43,7 @@ function ProjectProvider({ ...props }) {
   },
   {
     id: 'userExperience',
-    name: 'UX',
+    name: 'UX & Research',
     active: null
   },
   {

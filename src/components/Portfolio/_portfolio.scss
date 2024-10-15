@@ -18,8 +18,8 @@
         list-style-type: none;
         font-family: $mainFont;
         font-weight: medium;
-        font-size: 1em;
-        padding: 10px 20px;
+        font-size: 0.9em;
+        padding: 6px 16px;
         border-radius: 30px;
         text-align: center;
         align-items: center;
@@ -27,7 +27,7 @@
     & .active,
      :hover {
         background: linear-gradient(92.81deg, #3957ED 17.54%, #7EC9F5 96.29%);
-        padding: 10px 20px;
+        padding: 6px 16px;
         font-weight: 700;
         color: white;
         transition: 0.25s;
