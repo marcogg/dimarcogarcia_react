@@ -23,19 +23,19 @@
     header {
         background-image: url(../img/bgHeader.svg);
         background-size: cover;
-        max-height: 700px;
+        max-height: 620px;
         background-repeat: no-repeat;
         background-position: left;
     }
 }
 
-    header {
+header {
     background-image: url(../img/bgHeader.svg);
     background-size: cover;
-    max-height: 750px;
+    max-height: 620px;
     background-repeat: no-repeat;
     background-position: bottom;
-    }
+}
 
 .heroBg {
     width: 90%;
@@ -66,6 +66,7 @@
         transform: rotate(360deg);
     }
 }
+
 .phone {
     position: absolute;
     transform: translate(50%, -90%);
@@ -79,7 +80,7 @@
     min-width: 200px;
     position: absolute;
     left: 5%;
-    top: 450px;
+    top: 550px;
 }
 
 @media screen and (min-width:300px) {
@@ -100,6 +101,7 @@
         position: relative;
         width: 100%;
     }
+
     .arrow {
         width: 60vw;
         min-width: 200px;
@@ -126,6 +128,7 @@
         left: 30px;
     }
 }
+
 @media screen and (min-width:768px) {
     .containerCarousel {
         position: relative;
@@ -143,31 +146,31 @@
 }
 
 @media screen and (min-width:300px) {
-.serviceCarousel {
-    position: absolute;
-    transform: translate(-30px, 140px);
-    top: 0;
-    width: 100%;
-    z-index: 10;
-}
+    .serviceCarousel {
+        position: absolute;
+        transform: translate(-30px, 140px);
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
 }
 
 @media screen and (min-width:768px) {
-.serviceCarousel {
-    position: absolute;
-    transform: translate(-30px, -90px);
-    top: 0;
-    width: 100%;
-    z-index: 10;
-}
+    .serviceCarousel {
+        position: absolute;
+        transform: translate(-30px, -90px);
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
 }
 
 @media screen and (min-width:1023px) {
-.serviceCarousel {
-    position: absolute;
-    transform: translate(-30px, 20px);
-    top: 0;
-    width: 100%;
-    z-index: 10;
-}
+    .serviceCarousel {
+        position: absolute;
+        transform: translate(-30px, 20px);
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
 }

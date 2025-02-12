@@ -40,7 +40,7 @@ const Info = () => {
           <div className='row justify-content-between w-100 mt-4'>
             <div className='col-6 col-md-2 col-lg-2'>
               <div className='circle design'>
-                <h2>Design</h2>
+                <h2>Visual Design</h2>
               </div>
             </div>
             <div className='col-6 col-md-2 col-lg-2'>

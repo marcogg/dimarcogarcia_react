@@ -6,9 +6,10 @@ import './_projectInfo.scss'
 import Navigate from '../components/Navigate'
 import ScrollToTop from '../components/ScrollToTop/ScrollToTop'
 import CardsMoreProjects from '../components/CardsMoreProjects'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import CategoryTabs from '../components/CategoryTabs'
 import Footer from '../components/Footer/Footer'
+import BreakLine from '../components/BreakLine/BreakLine'
 
 const ProjectInfo = ({ ...props }) => {
   // useEffect(() => {
@@ -18,7 +19,7 @@ const ProjectInfo = ({ ...props }) => {
   // }, [])
 
   const context = useProjectContext()
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
   return (
     <>
@@ -46,21 +47,21 @@ const ProjectInfo = ({ ...props }) => {
                 <div className='row mt-4 justify-content-left'>
                   <div className='col-12 col-md-12 col-lg-12'>
                     <h3 className='subtitle'>About the problem</h3>
-                    <p className='bodyText'>{`${context.projectFeatured.challenge}`}</p>
+                    <p className='bodyText'><BreakLine text={`${context.projectFeatured.challenge}`} /></p>
                   </div>
                 </div>
                 {/* The approach */}
                 <div className='row mt-4'>
                   <div className='col-12 col-md-12 col-lg-12'>
                     <h3 className='subtitle'>The solution</h3>
-                    <p className='bodyText'>{`${context.projectFeatured.approach}`}</p>
+                    <p className='bodyText'><BreakLine text={`${context.projectFeatured.approach}`} /></p>
                   </div>
                 </div>
                 {/* The impact */}
                 <div className='row mt-4'>
                   <div className='col-12 col-md-12 col-lg-12'>
                     <h3 className='subtitle'>The impact</h3>
-                    <p className='bodyText'>{`${context.projectFeatured.impact}`}</p>
+                    <p className='bodyText'><BreakLine text={`${context.projectFeatured.impact}`} /></p>
                   </div>
                 </div>
                 {/* The impact */}

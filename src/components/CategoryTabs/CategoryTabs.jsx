@@ -3,7 +3,7 @@ import { useProjectContext } from '../../context/ProjectContext'
 
 const CategoryTabs = () => {
   const context = useProjectContext()
-  const API_URL = 'http://localhost:5000/api/projects/getProjects'
+  const API_URL = 'http://localhost:5500/api/projects/getProjects'
 
   // ToggleButton Categories
   const handleToggle = (clickedId) => {

@@ -15,11 +15,11 @@ const Navigate = () => {
           <li><Link to='/#projects'>Projects</Link></li>
           <li><Link to='/#mySkills'>Skills</Link></li>
           <li><Link to='/#contactMe'>Contact</Link></li>
-          <li id='toggleContainer'>
+          {/* <li id='toggleContainer'>
             <div className='darkMode' id='toggle'>
               <span className='switch' />
             </div>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

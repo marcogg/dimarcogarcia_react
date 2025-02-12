@@ -7,12 +7,15 @@
     width: 100%;
     position: relative;
 
-.spinner{
-width: clamp(140px, 160px, 280px);
-height: auto;
-animation: spin 10s ease-in-out infinite;
-display: block;
-}
+    .spinner {
+        width: clamp(140px, 160px, 280px);
+        height: auto;
+        animation: spin 10s ease-in-out infinite;
+        display: block;
+    }
 
 }
 
+.justify-content-center {
+    justify-content: center !important;
+}

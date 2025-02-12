@@ -19,7 +19,7 @@ const Header = () => {
           <div className='row'>
             <div className='col-12 col-md-6 col-lg-6'>
               <h1 className='mt-5'>Everything for your brand</h1>
-              <h4 className='darkText'>Web development, digital marketing, design and more</h4>
+              <h4 className='darkText'>Web development, Visual Design, UX/UI, & Marketing </h4>
             </div>
             <div className='col-12 col-md-6 col-lg-6'>
               <div className='containerHero'>
@@ -40,7 +40,15 @@ const Header = () => {
                         </li>
                         <li className='glide__slide'>
                           <img src='../img/socialMedia.png' className='w-100' />
-                          <h2 className='captionSlider'>Inbound marketing</h2>
+                          <h2 className='captionSlider'>Marketing</h2>
+                        </li>
+                        <li className='glide__slide'>
+                          <img src='../img/visualDesign.png' className='w-100' />
+                          <h2 className='captionSlider'>Visual Design</h2>
+                        </li>
+                        <li className='glide__slide'>
+                          <img src='../img/UX.png' className='w-100' />
+                          <h2 className='captionSlider'>User Experience</h2>
                         </li>
                       </ul>
                     </div>
