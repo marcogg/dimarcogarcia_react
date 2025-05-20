@@ -1,15 +1,14 @@
 /* eslint-disable react/prop-types */
-// import { useEffect } from 'react'
 import { useProjectContext } from '../context/ProjectContext'
 import Spinner from '../components/Spinner'
 import './_projectInfo.scss'
 import Navigate from '../components/Navigate'
 import ScrollToTop from '../components/ScrollToTop/ScrollToTop'
 import CardsMoreProjects from '../components/CardsMoreProjects'
-// import { useNavigate } from 'react-router-dom'
 import CategoryTabs from '../components/CategoryTabs'
 import Footer from '../components/Footer/Footer'
 import BreakLine from '../components/BreakLine/BreakLine'
+import { useEffect, useState } from 'react'
 
 const ProjectInfo = ({ ...props }) => {
   // useEffect(() => {
@@ -19,7 +18,19 @@ const ProjectInfo = ({ ...props }) => {
   // }, [])
 
   const context = useProjectContext()
-  // const navigate = useNavigate()
+  const [galleryImages, setGalleryImages] = useState([])
+
+  useEffect(() => {
+    const getImages = async () => {
+      // Nos aseguramos de que el contexto ya tenga los datos cargados
+      if (context.projectFeatured && context.projectFeatured.galleryImages) {
+        // Si por alguna razón es promesa, podrías hacer await aquí, pero parece ser un array simple
+        const loadGallery = await setGalleryImages(context.projectFeatured.galleryImages)
+        return loadGallery
+      }
+    }
+    getImages()
+  }, [context.projectFeatured, window.location]) // Dependencia correcta: cuando cambie el proyecto, vuelve a ejecutar
 
   return (
     <>
@@ -65,6 +76,21 @@ const ProjectInfo = ({ ...props }) => {
                   </div>
                 </div>
                 {/* The impact */}
+                {/* image gallery */}
+                <div className='row mt-4'>
+                  <div className='display-grid'>
+                    {galleryImages
+                      ? galleryImages.map((img) => (
+                        <img
+                          className='img-fluid border-radius-20 galleryImg'
+                          src={img}
+                          key={img}
+                          alt='Gallery'
+                        />
+                      ))
+                      : (<p className=''>No extra images for this project</p>)}
+                  </div>
+                </div>
                 <div className='row mt-4'>
                   <div className='col-12 col-md-12 col-lg-12'>
                     <h3 className='subtitle'>Skills and software used in this project</h3>

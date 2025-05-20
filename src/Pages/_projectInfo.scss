@@ -1,24 +1,24 @@
 // COLORS
-$primary:#7EC9F5;
+$primary: #7EC9F5;
 $secondary: #3957ED;
 $base: #f6f6f6;
 $lowContrast: #A5AFB6;
 $highContrast: #374249;
 
-.year{
+.year {
   color: $secondary;
   font-weight: 300;
   font-size: clamp(18px, 28px, 32px)
 }
 
-.title{
+.title {
   color: $secondary;
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   font-size: clamp(2rem, 42px, 3rem)
 }
 
-.brand{
+.brand {
   font-size: clamp(18px, 28px, 32px);
   color: $highContrast;
 }
@@ -29,25 +29,25 @@ $highContrast: #374249;
   padding: 2%;
 }
 
-.subtitle{
+.subtitle {
   color: $secondary;
   font-weight: semibold;
   font-size: clamp(18px, 2rem, 42px);
 }
 
-.textureProjects{
+.textureProjects {
   background: url(../../img/projectsBg.svg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: top;
-  position:absolute;
-  top:0;
+  position: absolute;
+  top: 0;
   height: 100%;
   width: 100%;
   z-index: -1;
 }
 
-.bodyText{
+.bodyText {
   line-height: 1.85rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
@@ -55,10 +55,10 @@ $highContrast: #374249;
   font-size: clamp(14pt, 1.15rem, 16pt);
 }
 
-.pills{
+.pills {
   padding: 1em;
   border-radius: 30px;
-  border:3px solid white;
+  border: 3px solid white;
   color: $secondary;
   box-shadow: 3px 3px 10px #7EC9F5;
   margin: 0.25em;
@@ -66,10 +66,10 @@ $highContrast: #374249;
   text-align: center;
 }
 
-.pillsContainer{
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
+.pillsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
   // display: grid;
   // grid-template-columns: repeat(4, 1fr);
@@ -79,8 +79,26 @@ flex-wrap: wrap;
   // align-items: center;
 }
 
-.btnProjects{
-  background:linear-gradient($primary $secondary);
-  padding:5% 2%;
+.btnProjects {
+  background: linear-gradient($primary $secondary);
+  padding: 5% 2%;
+  border-radius: 20px;
+}
+
+.display-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.galleryImg {
+  width: auto;
+  height: 300px;
+  display: block;
+  margin-bottom: 16px;
+  /* Adjust as needed */
+}
+
+.border-radius-20 {
   border-radius: 20px;
 }

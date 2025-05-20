@@ -4,7 +4,7 @@ import { useProjectContext } from '../../context/ProjectContext'
 // import { useState } from 'react'
 
 // eslint-disable-next-line react/prop-types
-const Cards = ({ caption = '', brand = '', image = '', projectName = '', url = '', category = '', year = '', challenge = '', approach = '', impact = '', projectLink = '', skills = '' }) => {
+const Cards = ({ caption = '', brand = '', image = '', projectName = '', url = '', category = '', year = '', challenge = '', approach = '', impact = '', projectLink = '', skills = '', galleryImages = '' }) => {
   const context = useProjectContext()
 
   const navigate = useNavigate()
@@ -22,7 +22,8 @@ const Cards = ({ caption = '', brand = '', image = '', projectName = '', url = '
       approach,
       impact,
       projectLink,
-      skills
+      skills,
+      galleryImages
     }
 
     console.log(projectData)

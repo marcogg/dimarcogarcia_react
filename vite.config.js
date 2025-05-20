@@ -9,7 +9,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      root: path.resolve(__dirname, '../node_modules')
+      rt: path.resolve(__dirname, '../node_modules')
     }
   }
   // ,

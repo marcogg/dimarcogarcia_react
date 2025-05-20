@@ -23,7 +23,8 @@ function ProjectProvider({ ...props }) {
     approach: '',
     impact: '',
     projectLink: '',
-    skills: ''
+    skills: '',
+    galleryImages: []
   })
 
   const [elementState, setElementState] = useState([{

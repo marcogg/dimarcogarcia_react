@@ -15,12 +15,15 @@
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
+
     & .imageContainer {
         position: relative;
+
         & img {
             border-radius: 20px;
             width: 100%;
         }
+
         & .overlay {
             position: absolute;
             background: linear-gradient(145.12deg, #0000FF -25.39%, #29ABE2 73.16%);
@@ -33,6 +36,7 @@
             opacity: 0;
         }
     }
+
     & .meta {
         padding: 10%;
         height: 100%;
@@ -41,25 +45,30 @@
         //     height: 240px;
         // }
     }
+
     & span {
         font-family: $mainFont;
         color: $secondary;
         font-weight: lighter;
         font-size: 1.5rem;
     }
+
     & h5 {
         color: $secondary;
         margin-bottom: 15px;
     }
+
     & p {
         color: $highContrast;
     }
+
     & .client-card-title {
         // margin-top: 15px;
         font-family: $mainFont;
         font-weight: lighter;
-        font-size: 1.2rem;
-        color: $highContrast;
+        font-size: 0.85rem;
+        color: $secondary;
+        line-height: 1.5rem;
     }
 }
 
@@ -94,6 +103,8 @@ span.project-link {
     display: flex;
     cursor: pointer;
     margin-top: 15px;
+    font-weight: 500;
+    text-decoration: underline;
 }
 
 span.project-link:hover {

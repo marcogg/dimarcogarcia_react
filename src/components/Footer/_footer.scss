@@ -1,19 +1,21 @@
 @import '../../styles/_colors/colors';
 
-footer{
-justify-content: center;
-display: flex;
+footer {
+  justify-content: center;
+  display: flex;
 }
 
-.footer{
-  background: linear-gradient(90deg, rgba(0,0,255,1) 0%,  rgba(126,201,245,1) 100%);
+.footer {
+  background: linear-gradient(90deg, rgba(0, 0, 255, 1) 0%, rgba(126, 201, 245, 1) 100%);
   max-width: 1200px;
   border-radius: clamp(20px, 30%, 50px) clamp(20px, 30%, 50px) 0 0;
   padding: 0;
   margin-top: 10vh;
   padding: 5% 5% 0 5%;
+  flex-direction: column;
+  justify-content: space-around;
 
-  & .title{
+  & .title {
     background: -webkit-linear-gradient(180deg, #7EC9F5, #3957ED);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -22,8 +24,31 @@ display: flex;
 
   }
 
-  .img-footer{
-    position: relative;
-    bottom: -3px;
+  .img-footer {}
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  margin: 2vh;
+
+  & input,
+  select {
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid $primary;
+  }
+
+  & button[type=submit] {
+    width: 30%;
+    max-width: 300px;
+    padding: 1vh;
+    border-radius: 10px;
+    border: 1px solid $primary;
+    background: $primary;
+    color: white;
+    margin-top: 2vh;
   }
 }
